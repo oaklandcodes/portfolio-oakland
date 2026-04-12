@@ -1,0 +1,33 @@
+<header
+	class="sticky top-0 z-10 border-b border-[var(--color-border)] bg-[color-mix(in_srgb,var(--color-bg)_88%,white_12%)] backdrop-blur-xl"
+>
+	<nav
+		class="mx-auto flex min-h-[4.5rem] w-[min(1120px,92vw)] items-center justify-between gap-4"
+		aria-label="Navegacion principal"
+	>
+		<a
+			class="font-[var(--font-heading)] text-[1.05rem] tracking-[0.02em] text-[var(--color-text)] no-underline"
+			href="#top"
+			aria-label="Ir al inicio"
+			>Oakland Caro</a
+		>
+
+		<ul class="m-0 hidden list-none gap-5 p-0 md:flex">
+			@for (item of navItems(); track item.href) {
+				<li>
+					<a
+						class="text-[0.95rem] text-[var(--color-text-soft)] no-underline transition hover:text-[var(--color-text)] focus-visible:text-[var(--color-text)]"
+						[href]="item.href"
+						>{{ item.label }}</a
+					>
+				</li>
+			}
+		</ul>
+
+		<a
+			class="rounded-full bg-[var(--color-accent)] px-4 py-2 text-[0.9rem] text-[var(--color-on-accent)] no-underline transition hover:bg-[var(--color-accent-strong)] focus-visible:bg-[var(--color-accent-strong)]"
+			href="#contacto"
+			>Contactar</a
+		>
+	</nav>
+</header>

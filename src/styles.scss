@@ -1,0 +1,42 @@
+@use 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+	--color-text: #312a44;
+	--color-text-soft: #544a67;
+	--color-accent: #88703e;
+	--color-accent-strong: #6f5b33;
+	--color-on-accent: #f9f6ef;
+	--color-bg: #dad4df;
+	--color-soft: #d7c5d2;
+	--color-surface: #bab0c8;
+	--color-border: #c4bbcf;
+	--color-border-strong: #a799bb;
+
+	--font-heading: 'Sora', 'Segoe UI', sans-serif;
+	--font-body: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: var(--font-body);
+	background: radial-gradient(circle at 10% 10%, #ece6f0 0%, var(--color-bg) 45%),
+		linear-gradient(180deg, var(--color-bg) 0%, #d4ccda 100%);
+	color: var(--color-text);
+	line-height: 1.5;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid color-mix(in srgb, var(--color-accent) 65%, white 35%);
+	outline-offset: 2px;
+}
