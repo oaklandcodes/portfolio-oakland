@@ -1,0 +1,26 @@
+<section id="habilidades" class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
+  <p class="mb-2 text-xs uppercase tracking-[0.08em] text-[var(--color-text-soft)]">
+    Stack profesional
+  </p>
+  <h2 class="mb-4 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
+    Habilidades y herramientas
+  </h2>
+
+  <div class="grid gap-4 lg:grid-cols-3">
+    @for (group of skills(); track group.title) {
+      <article class="rounded-2xl border border-[var(--color-border)] bg-white/35 p-4">
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-[0.04em] text-[var(--color-accent-strong)]">
+          {{ group.title }}
+        </h3>
+
+        <div class="flex flex-wrap gap-2">
+          @for (item of group.items; track item) {
+            <span class="rounded-full border border-[var(--color-border)] bg-white/50 px-3 py-1 text-sm text-[var(--color-text)]">
+              {{ item }}
+            </span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
+  <h2 class="mb-2 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
+    De los cuidados criticos al codigo escalable
+  </h2>
+  <p class="m-0 max-w-[70ch] text-[var(--color-text-soft)]">
+    Mi trayectoria combina precision tecnica y pensamiento de producto para crear experiencias
+    web solidas, accesibles y mantenibles.
+  </p>
+
+  <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    @for (metric of metrics(); track metric.label) {
+      <article class="rounded-xl border border-[var(--color-border)] bg-white/35 px-3 py-4">
+        <p class="m-0 text-xl font-bold text-[var(--color-accent-strong)]">{{ metric.value }}</p>
+        <p class="m-0 mt-1 text-sm uppercase tracking-[0.04em] text-[var(--color-text-soft)]">
+          {{ metric.label }}
+        </p>
+      </article>
+    }
+  </div>
+</section>
