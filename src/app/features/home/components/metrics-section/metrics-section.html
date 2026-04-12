@@ -7,13 +7,32 @@
     web solidas, accesibles y mantenibles.
   </p>
 
-  <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  <blockquote class="border-iris-mist/45 text-dusky-lilac mt-4 max-w-[72ch] border-l-2 pl-4 text-sm font-medium italic leading-relaxed">
+    De la enfermeria neonatal al codigo escalable: precision clinica, foco humano y calidad tecnica
+    en cada producto digital.
+  </blockquote>
+
+  <div class="mt-6 grid auto-rows-fr gap-3 sm:grid-cols-2 lg:grid-cols-4">
     @for (metric of metrics(); track metric.label) {
-      <article class="rounded-xl border border-[var(--color-border)] bg-white/35 px-3 py-4">
-        <p class="m-0 text-xl font-bold text-[var(--color-accent-strong)]">{{ metric.value }}</p>
-        <p class="m-0 mt-1 text-sm uppercase tracking-[0.04em] text-[var(--color-text-soft)]">
-          {{ metric.label }}
-        </p>
+      <article class="flex h-full items-start gap-3 rounded-xl border border-white/20 bg-white/30 px-3 py-4 backdrop-blur-md shadow-xl shadow-[#342a4f]/10">
+        <div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/50 text-[var(--color-accent-strong)] backdrop-blur-md">
+          @if (metric.label.includes('Años')) {
+            <span aria-hidden="true">⏱</span>
+          } @else if (metric.label.includes('Proyectos')) {
+            <span aria-hidden="true">🚀</span>
+          } @else if (metric.label.includes('Certificaciones')) {
+            <span aria-hidden="true">🎓</span>
+          } @else {
+            <span aria-hidden="true">🌍</span>
+          }
+        </div>
+
+        <div class="min-w-0">
+          <p class="m-0 text-xl font-bold leading-tight text-[var(--color-accent-strong)]">{{ metric.value }}</p>
+          <p class="m-0 mt-1 text-sm uppercase leading-snug tracking-[0.04em] text-[var(--color-text-soft)]">
+            {{ metric.label }}
+          </p>
+        </div>
       </article>
     }
   </div>

@@ -8,15 +8,23 @@
 
   <div class="grid gap-4 lg:grid-cols-3">
     @for (group of skills(); track group.title) {
-      <article class="rounded-2xl border border-[var(--color-border)] bg-white/35 p-4">
-        <h3 class="mb-3 text-sm font-semibold uppercase tracking-[0.04em] text-[var(--color-accent-strong)]">
-          {{ group.title }}
+      <article class="flex h-full flex-col rounded-2xl border border-white/20 bg-white/30 p-4 backdrop-blur-md shadow-xl shadow-[#342a4f]/10">
+        <h3 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.04em] text-[var(--color-accent-strong)]">
+          @if (group.title.includes('Frontend')) {
+            <span aria-hidden="true">🧩</span>
+          } @else if (group.title.includes('Backend')) {
+            <span aria-hidden="true">🛠</span>
+          } @else {
+            <span aria-hidden="true">🤝</span>
+          }
+          <span>{{ group.title }}</span>
         </h3>
 
         <div class="flex flex-wrap gap-2">
           @for (item of group.items; track item) {
-            <span class="rounded-full border border-[var(--color-border)] bg-white/50 px-3 py-1 text-sm text-[var(--color-text)]">
-              {{ item }}
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/40 px-3 py-1 text-sm leading-tight text-[var(--color-text)] backdrop-blur-md">
+              <span aria-hidden="true" class="text-[0.72rem]">✦</span>
+              <span>{{ item }}</span>
             </span>
           }
         </div>

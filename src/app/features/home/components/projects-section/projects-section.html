@@ -1,0 +1,72 @@
+<section id="proyectos" class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
+  <p class="mb-2 text-[10px] uppercase tracking-[0.2em] text-[var(--color-text-soft)]">
+    Portafolio
+  </p>
+  <h2 class="mb-4 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] font-black text-[var(--color-text)]">
+    Proyectos destacados
+  </h2>
+
+  <div class="grid auto-rows-fr gap-4 lg:grid-cols-3">
+    @for (project of projects(); track project.title) {
+      <article class="shadow-midnight-orchid/10 flex h-full flex-col rounded-2xl border border-white/20 bg-white/30 p-4 backdrop-blur-md shadow-xl">
+        <div class="overflow-hidden rounded-xl border border-white/20 bg-white/40 p-1.5 backdrop-blur-md">
+          <img
+            [src]="project.imageUrl"
+            [alt]="project.imageAlt"
+            class="h-40 w-full rounded-lg object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex items-start justify-between gap-2">
+          <h3 class="m-0 mt-3 text-[1.02rem] font-black leading-tight text-[var(--color-accent-strong)]">
+            {{ project.title }}
+          </h3>
+          <span class="mt-3 rounded-full border border-white/20 bg-white/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--color-text-soft)] backdrop-blur-md">
+            {{ project.category }}
+          </span>
+        </div>
+
+        <p class="mt-2 text-sm font-light leading-relaxed text-[var(--color-text-soft)]">
+          {{ project.summary }}
+        </p>
+
+        <ul class="mt-3 grid gap-1.5 pl-5 text-[0.84rem] font-light leading-relaxed text-[var(--color-text-soft)]">
+          @for (highlight of project.highlights; track highlight) {
+            <li class="marker:text-[var(--color-accent-strong)]">{{ highlight }}</li>
+          }
+        </ul>
+
+        <div class="mt-3 flex flex-wrap gap-2">
+          @for (tech of project.stack; track tech) {
+            <span class="border-dusky-lilac/40 text-dusky-lilac hover:bg-dusky-lilac rounded-full border bg-transparent px-2.5 py-1 text-xs transition-all duration-300 hover:text-white">
+              {{ tech }}
+            </span>
+          }
+        </div>
+
+        <div class="mt-auto flex gap-2 pt-4">
+          <a
+            [href]="project.demoUrl"
+            target="_blank"
+            rel="noreferrer"
+            class="group bg-midnight-orchid hover:bg-midnight-orchid/90 hover:shadow-midnight-orchid/10 inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95"
+          >
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:-translate-y-0.5">↗</span>
+            Demo
+          </a>
+
+          <a
+            [href]="project.repoUrl"
+            target="_blank"
+            rel="noreferrer"
+            class="group hover:shadow-midnight-orchid/10 inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/40 px-3 py-1.5 text-xs font-semibold text-[var(--color-text)] no-underline backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95 hover:bg-white/55"
+          >
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-0.5">&#60;/&#62;</span>
+            Repo
+          </a>
+        </div>
+      </article>
+    }
+  </div>
+</section>

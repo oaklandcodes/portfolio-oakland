@@ -1,0 +1,39 @@
+<section id="educacion" class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
+  <p class="mb-2 text-xs uppercase tracking-[0.08em] text-[var(--color-text-soft)]">
+    Formación
+  </p>
+  <h2 class="mb-4 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
+    Educación y certificaciones
+  </h2>
+
+  <div class="border-iris-mist/35 relative grid gap-4 border-l-2 pl-6 sm:pl-8">
+    @for (item of education(); track item.school + item.title) {
+      <article class="relative flex h-full flex-col rounded-xl border border-white/20 bg-white/30 px-4 py-3 backdrop-blur-md shadow-xl shadow-[#342a4f]/10">
+        <span class="border-silver-wisteria bg-dusky-lilac absolute -left-[1.95rem] top-4 h-3.5 w-3.5 rounded-full border-4"></span>
+        <p class="m-0 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-text-soft)]">{{ item.year }}</p>
+        <h3 class="m-0 mt-1 text-[0.98rem] font-black leading-snug text-[var(--color-text)]">{{ item.title }}</h3>
+        <p class="m-0 mt-2 text-sm font-light leading-snug text-[var(--color-accent-strong)]">{{ item.school }}</p>
+      </article>
+    }
+  </div>
+
+  <div class="mt-5 rounded-xl border border-[var(--color-border)] bg-white/35 p-4">
+    <h3 class="m-0 text-sm font-semibold uppercase tracking-[0.05em] text-[var(--color-accent-strong)]">
+      Idiomas
+    </h3>
+
+    <div class="mt-3 flex flex-wrap gap-2">
+      @for (language of languages(); track language.name) {
+        <span class="border-dusky-lilac/40 text-dusky-lilac hover:bg-dusky-lilac inline-flex min-h-9 items-center gap-2 rounded-full border bg-transparent px-3 py-1 text-sm leading-tight transition-all duration-300 hover:text-white">
+          <img
+            [src]="language.flagImage"
+            [alt]="'Bandera de ' + language.name"
+            class="h-4 w-6 rounded-[2px] border border-black/10 object-cover"
+            loading="lazy"
+          />
+          <span>{{ language.name }}: {{ language.level }}</span>
+        </span>
+      }
+    </div>
+  </div>
+</section>

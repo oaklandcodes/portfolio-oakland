@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Profile } from '../../data/portfolio.models';
 
@@ -10,8 +10,4 @@ import { Profile } from '../../data/portfolio.models';
 })
 export class HeroSection {
   readonly profile = input.required<Profile>();
-
-  protected readonly headline = computed(
-    () => `${this.profile().greeting} ${this.profile().name}`
-  );
 }

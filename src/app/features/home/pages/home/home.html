@@ -5,37 +5,11 @@
 
   <app-skills-section [skills]="skills()" />
 
-  <section
-    id="experiencia"
-    class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-[1.1rem]"
-  >
-    <h2 class="mb-2 text-[clamp(1.15rem,2.2vw,1.55rem)]">Experiencia profesional</h2>
-    <p class="m-0 text-[var(--color-text-soft)]">Seccion reservada para Sprint 3.</p>
-  </section>
+  <app-experience-section [experiences]="experience()" />
 
-  <section
-    id="proyectos"
-    class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-[1.1rem]"
-  >
-    <h2 class="mb-2 text-[clamp(1.15rem,2.2vw,1.55rem)]">Proyectos destacados</h2>
-    <p class="m-0 text-[var(--color-text-soft)]">Seccion reservada para Sprint 4.</p>
-  </section>
+  <app-projects-section [projects]="projects()" />
 
-  <section
-    id="educacion"
-    class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-[1.1rem]"
-  >
-    <h2 class="mb-2 text-[clamp(1.15rem,2.2vw,1.55rem)]">Educacion y certificaciones</h2>
-    <p class="m-0 text-[var(--color-text-soft)]">Seccion reservada para Sprint 5.</p>
-  </section>
+  <app-education-section [education]="education()" [languages]="languages()" />
 
-  <section
-    id="contacto"
-    class="mt-1.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-[1.1rem]"
-  >
-    <h2 class="mb-2 text-[clamp(1.15rem,2.2vw,1.55rem)]">Contacto</h2>
-    <p class="m-0 text-[var(--color-text-soft)]">
-      CTA final y enlaces profesionales en el siguiente sprint.
-    </p>
-  </section>
+  <app-contact-section [contacts]="contacts()" />
 </div>
