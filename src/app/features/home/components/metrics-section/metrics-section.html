@@ -1,21 +1,31 @@
-<section class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
-  <h2 class="mb-2 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
-    De los cuidados criticos al codigo escalable
+<section
+  class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-5 sm:px-8 sm:py-7"
+>
+  <h2
+    class="mb-2 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]"
+  >
+    De los cuidados críticos al código escalable
   </h2>
-  <p class="m-0 max-w-[70ch] text-[var(--color-text-soft)]">
-    Mi trayectoria combina precision tecnica y pensamiento de producto para crear experiencias
-    web solidas, accesibles y mantenibles.
+  <p class="m-0 max-w-[70ch] text-midnight-orchid/80 leading-relaxed">
+    Desarrolladora enfocada en la construcción de ecosistemas digitales mediante
+    <strong>Angular</strong>, priorizando la accesibilidad y la arquitectura limpia.
   </p>
 
-  <blockquote class="border-iris-mist/45 text-dusky-lilac mt-4 max-w-[72ch] border-l-2 pl-4 text-sm font-medium italic leading-relaxed">
-    De la enfermeria neonatal al codigo escalable: precision clinica, foco humano y calidad tecnica
-    en cada producto digital.
+  <blockquote
+    class="border-dusky-lilac/30 text-dusky-lilac mt-6 max-w-[60ch] border-l-2 pl-4 text-base font-medium italic"
+  >
+    "De los cuidados críticos al código escalable: trasladando la precisión clínica y el enfoque
+    humano al desarrollo de productos digitales."
   </blockquote>
 
   <div class="mt-6 grid auto-rows-fr gap-3 sm:grid-cols-2 lg:grid-cols-4">
     @for (metric of metrics(); track metric.label) {
-      <article class="flex h-full items-start gap-3 rounded-xl border border-white/20 bg-white/30 px-3 py-4 backdrop-blur-md shadow-xl shadow-[#342a4f]/10">
-        <div class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/50 text-[var(--color-accent-strong)] backdrop-blur-md">
+      <article
+        class="flex h-full items-start gap-3 rounded-xl border border-white/20 bg-white/30 px-3 py-4 backdrop-blur-md shadow-xl shadow-[#342a4f]/10"
+      >
+        <div
+          class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/50 text-[var(--color-accent-strong)] backdrop-blur-md"
+        >
           @if (metric.label.includes('Años')) {
             <span aria-hidden="true">⏱</span>
           } @else if (metric.label.includes('Proyectos')) {
@@ -28,8 +38,12 @@
         </div>
 
         <div class="min-w-0">
-          <p class="m-0 text-xl font-bold leading-tight text-[var(--color-accent-strong)]">{{ metric.value }}</p>
-          <p class="m-0 mt-1 text-sm uppercase leading-snug tracking-[0.04em] text-[var(--color-text-soft)]">
+          <p class="m-0 text-xl font-bold leading-tight text-[var(--color-accent-strong)]">
+            {{ metric.value }}
+          </p>
+          <p
+            class="m-0 mt-1 text-sm uppercase leading-snug tracking-[0.04em] text-[var(--color-text-soft)]"
+          >
             {{ metric.label }}
           </p>
         </div>

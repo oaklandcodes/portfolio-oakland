@@ -55,5 +55,5 @@ export type ProjectItem = {
   highlights: string[];
   stack: string[];
   demoUrl: string;
-  repoUrl: string;
+  repoUrl?: string;
 };

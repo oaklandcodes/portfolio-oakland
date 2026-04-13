@@ -19,7 +19,7 @@ export const PROFILE_DATA: Profile = {
 };
 
 export const CONTACT_LINKS: ContactLinks = {
-  phone: '640116766',
+  phone: '+34640116766',
   github: 'https://github.com/oaklandcodes',
   linkedin: 'https://www.linkedin.com/in/oaklandcaro91/',
   email: 'oakland.caro1@gmail.com',
@@ -77,12 +77,12 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     title: 'Frontend Developer Junior',
     company: 'Sagardobus S.L.',
-    period: '2025 - 2026',
+    period: 'Mayo 2025 - Actualidad',
     description: [
-      'Desarrollo de SPAs con Angular +, implementando Signals y Control Flow para optimizar la reactividad y el rendimiento.',
-      'Arquitectura modular: Creación de componentes altamente reutilizables y servicios desacoplados para el consumo de APIs REST.',
-      'Optimización de flujos de datos: Manejo eficiente de estados dinámicos y lógica de negocio compleja en TypeScript.',
-      'Colaboración técnica: Participación activa en revisiones de código y despliegues bajo metodologías ágiles (Scrum).',
+      'Desarrollo de interfaces reactivas con Angular , integrando el nuevo flujo de control y Signals para maximizar la eficiencia del renderizado.',
+      'Consumo y gestión de APIs REST, asegurando una comunicación fluida entre el cliente y el servidor en aplicaciones críticas de negocio.',
+      'Liderazgo técnico en la modularización de componentes, reduciendo la redundancia de código y facilitando el mantenimiento a largo plazo.',
+      'Colaboración estrecha en metodologías Agile (Scrum), participando en revisiones de código que elevaron los estándares de calidad del equipo.',
     ],
   },
   {
@@ -154,6 +154,21 @@ export const LANGUAGES_DATA: Language[] = [
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
+    title: 'Sagardobus | Proyecto Profesional',
+    category: 'Practicas + etapa profesional',
+    summary:
+      'Participacion en entorno profesional real durante practicas y etapa laboral como Frontend Developer Junior, trabajando en funcionalidades de negocio con Angular y consumo de APIs REST.',
+    imageUrl: 'assets/SagardoBus.png',
+    imageAlt: 'Captura del proyecto profesional de Sagardobus',
+    highlights: [
+      'Desarrollo y mantenimiento de funcionalidades CRUD en Angular',
+      'Integracion de servicios para consumo de APIs REST',
+      'Trabajo en equipo con metodologia Scrum y control de versiones con Git',
+    ],
+    stack: ['Angular', 'TypeScript', 'APIs REST', 'Git', 'Scrum'],
+    demoUrl: 'https://www.sagardobus.com/',
+  },
+  {
     title: 'OakAir-app',
     category: 'Plataforma Boutique de Vuelos',
     summary:
@@ -171,18 +186,18 @@ export const PROJECTS_DATA: ProjectItem[] = [
     repoUrl: 'https://github.com/oaklandcodes',
   },
   {
-    title: 'Proyecto destacado #2',
-    category: 'En preparacion',
+    title: 'API Documentada con Swagger',
+    category: 'Backend listo | Frontend en progreso',
     summary:
-      'Card reservada para tu segundo proyecto principal. En cuanto me compartas el resumen, lo dejamos completo con stack, imagen y links reales.',
-    imageUrl: 'assets/projects/project-placeholder.avif',
-    imageAlt: 'Espacio reservado para segundo proyecto destacado',
+      'Diseño y documentación completa de la API con Swagger/OpenAPI. Actualmente en fase de implementación de la capa frontend para cerrar el flujo end-to-end.',
+    imageUrl: 'assets/swagger.png',
+    imageAlt: 'Captura del segundo proyecto destacado con interfaz Swagger',
     highlights: [
-      'Pendiente de resumen funcional',
-      'Pendiente de stack tecnico final',
-      'Pendiente de enlace demo y repositorio',
+      'Contrato de API y endpoints definidos en Swagger',
+      'Estructura backend validada para integración cliente-servidor',
+      'Siguiente hito: desarrollo del frontend en Angular',
     ],
-    stack: ['Angular', 'TypeScript'],
+    stack: ['Swagger', 'OpenAPI', 'REST API', 'Angular (en progreso)'],
     demoUrl: 'https://oaklandcodes.github.io',
     repoUrl: 'https://github.com/oaklandcodes',
   },
