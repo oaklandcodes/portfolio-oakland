@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Portfolio Oakland favicon">
+  <rect width="32" height="32" rx="8" fill="#ece8f0"/>
+  <path d="M12 8L7 16L12 24" fill="none" stroke="#312a44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 8L25 16L20 24" fill="none" stroke="#312a44" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 17h4.2l1.4-3 2.1 6 1.8-4h2.2l1.1 2h3.2" fill="none" stroke="#88703e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

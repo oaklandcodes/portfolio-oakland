@@ -6,7 +6,9 @@
     "dev": "ng serve",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "build:gh-pages": "ng build --base-href /portfolio-angular/",
+    "deploy:gh-pages": "angular-cli-ghpages --dir=dist/portfolio-angular/browser"
   },
   "private": true,
   "packageManager": "npm@11.11.0",
@@ -25,6 +27,7 @@
     "@angular/cli": "^21.2.7",
     "@angular/compiler-cli": "^21.2.0",
     "@tailwindcss/postcss": "^4.2.2",
+    "angular-cli-ghpages": "^3.0.2",
     "postcss": "^8.5.9",
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.2",

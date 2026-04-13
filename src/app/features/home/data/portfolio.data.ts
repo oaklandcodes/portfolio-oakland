@@ -11,7 +11,6 @@ import {
 } from './portfolio.models';
 
 export const PROFILE_DATA: Profile = {
-  greeting: 'Presentando a',
   name: 'Oakland Caro',
   role: 'Frontend Developer | Angular Specialist',
   summary:
@@ -19,7 +18,6 @@ export const PROFILE_DATA: Profile = {
 };
 
 export const CONTACT_LINKS: ContactLinks = {
-  phone: '+34640116766',
   github: 'https://github.com/oaklandcodes',
   linkedin: 'https://www.linkedin.com/in/oaklandcaro91/',
   email: 'oakland.caro1@gmail.com',
@@ -154,10 +152,10 @@ export const LANGUAGES_DATA: Language[] = [
 
 export const PROJECTS_DATA: ProjectItem[] = [
   {
-    title: 'Sagardobus | Proyecto Profesional',
-    category: 'Practicas + etapa profesional',
+    title: 'Sagardobus',
+    category: 'Etapa profesional',
     summary:
-      'Participacion en entorno profesional real durante practicas y etapa laboral como Frontend Developer Junior, trabajando en funcionalidades de negocio con Angular y consumo de APIs REST.',
+      'Participacion en entorno profesional como  Junior Frontend Developer, trabajando en funcionalidades de negocio con Angular y consumo de APIs REST.',
     imageUrl: 'assets/SagardoBus.png',
     imageAlt: 'Captura del proyecto profesional de Sagardobus',
     highlights: [
@@ -169,7 +167,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     demoUrl: 'https://www.sagardobus.com/',
   },
   {
-    title: 'OakAir-app',
+    title: 'OakAir',
     category: 'Plataforma Boutique de Vuelos',
     summary:
       'SPA desarrollada con Angular 19 y arquitectura Standalone, enfocada en gestión de vuelos con experiencia premium y flujos optimizados.',
@@ -187,7 +185,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     title: 'API Documentada con Swagger',
-    category: 'Backend listo | Frontend en progreso',
+    category: 'Backend',
     summary:
       'Diseño y documentación completa de la API con Swagger/OpenAPI. Actualmente en fase de implementación de la capa frontend para cerrar el flujo end-to-end.',
     imageUrl: 'assets/swagger.png',

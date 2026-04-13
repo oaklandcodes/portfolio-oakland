@@ -9,20 +9,7 @@
     Disponible para colaborar en proyectos frontend con Angular, arquitectura modular y mejora continua.
   </p>
 
-  <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-    @if (contacts().phone) {
-      <a
-        class="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-white/35 px-4 py-3 text-sm text-[var(--color-text)] no-underline transition hover:bg-white/55"
-        [href]="'tel:' + contacts().phone"
-        aria-label="Llamar por telefono"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 fill-current">
-          <path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.2 11.2 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.1a1 1 0 0 1 1 1 11.2 11.2 0 0 0 .56 3.5 1 1 0 0 1-.24 1z" />
-        </svg>
-        <span>Telefono</span>
-      </a>
-    }
-
+  <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
     <a
       class="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-white/35 px-4 py-3 text-sm text-[var(--color-text)] no-underline transition hover:bg-white/55"
       [href]="'mailto:' + contacts().email"

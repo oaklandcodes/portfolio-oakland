@@ -3,17 +3,20 @@
   class="grid gap-8 rounded-[1.3rem] border border-[var(--color-border)] bg-[linear-gradient(160deg,#ece8f0_0%,#dfd7e8_55%,#d7cddd_100%)] p-[clamp(1.2rem,4vw,2.5rem)] lg:grid-cols-[1.25fr_0.75fr] lg:items-center"
 >
   <div>
-    <span class="text-iris-mist text-sm font-semibold uppercase tracking-widest">
-      {{ profile().greeting }}
-    </span>
-
-    <h1 class="text-midnight-orchid mt-2 text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-[0.98]">
+    <h1 class="text-midnight-orchid text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-[0.98]">
       {{ profile().name }}
     </h1>
 
     <h2 class="text-dusky-lilac mt-4 text-[clamp(1.35rem,2.8vw,2rem)] font-medium">
       {{ profile().role }}
     </h2>
+
+    <p class="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white/35 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-soft)]">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 shrink-0 fill-none stroke-current stroke-[1.6]">
+        <path d="M2.5 12h4l2-4 3 8 2.2-5h2.3l1.5 2h3.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span>De la enfermería al frontend</span>
+    </p>
 
     <p class="mt-6 max-w-2xl text-[clamp(1rem,1.7vw,1.2rem)] leading-relaxed text-slate-700">
       {{ profile().summary }}

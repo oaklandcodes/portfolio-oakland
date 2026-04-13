@@ -1,5 +1,4 @@
 export type Profile = {
-  greeting: string;
   name: string;
   role: string;
   summary: string;
