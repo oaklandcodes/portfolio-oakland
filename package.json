@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-angular",
+  "name": "portfolio-oakland",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,8 +7,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "build:gh-pages": "ng build --base-href /portfolio-angular/",
-    "deploy:gh-pages": "angular-cli-ghpages --dir=dist/portfolio-angular/browser"
+    "build:gh-pages": "ng build --base-href /portfolio-oakland/",
+    "deploy:gh-pages": "angular-cli-ghpages --dir=dist/portfolio-oakland/browser"
   },
   "private": true,
   "packageManager": "npm@11.11.0",

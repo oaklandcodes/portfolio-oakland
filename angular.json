@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-angular": {
+    "portfolio-oakland": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfolio-angular:build:production"
+              "buildTarget": "portfolio-oakland:build:production"
             },
             "development": {
-              "buildTarget": "portfolio-angular:build:development"
+              "buildTarget": "portfolio-oakland:build:development"
             }
           },
           "defaultConfiguration": "development"
