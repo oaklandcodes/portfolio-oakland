@@ -20,7 +20,7 @@ export const PROFILE_DATA: Profile = {
 export const CONTACT_LINKS: ContactLinks = {
   github: 'https://github.com/oaklandcodes',
   linkedin: 'https://www.linkedin.com/in/oaklandcaro91/',
-  email: 'oakland.caro1@gmail.com',
+  email: 'oakland.caro91@gmail.com',
 };
 
 export const METRICS_DATA: MetricItem[] = [
