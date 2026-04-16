@@ -171,8 +171,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: 'Plataforma Boutique de Vuelos',
     summary:
       'SPA desarrollada con Angular 19 y arquitectura Standalone, enfocada en gestión de vuelos con experiencia premium y flujos optimizados.',
-    imageUrl: 'assets/projects/04-flights-list.png',
-    imageAlt: 'Captura de OakAir con listado de vuelos y formulario de búsqueda',
+    imageUrl: '/assets/projects/login.png', // Ruta corregida para Angular
+    imageAlt: 'Captura de la nueva landing de OakAir',
     highlights: [
       'Uso avanzado de Signals para reactividad sin latencia',
       'Autenticacion JWT con proteccion de rutas privadas',
