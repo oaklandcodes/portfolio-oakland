@@ -1,50 +1,68 @@
-<section id="contacto" class="mt-1.5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:p-7">
-  <p class="mb-2 text-xs uppercase tracking-[0.08em] text-[var(--color-text-soft)]">
-    Contacto
-  </p>
-  <h2 class="mb-2 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
-    Construyamos algo con impacto
-  </h2>
-  <p class="m-0 text-[var(--color-text-soft)]">
-    Disponible para colaborar en proyectos frontend con Angular, arquitectura modular y mejora continua.
-  </p>
+<section id="contacto" class="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/10 p-[clamp(1.5rem,5vw,3rem)] backdrop-blur-sm shadow-xl">
+  
+  <div class="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-midnight-orchid/10 blur-[100px]"></div>
 
-  <div class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    <a
-      class="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-white/35 px-4 py-3 text-sm text-[var(--color-text)] no-underline transition hover:bg-white/55"
-      [href]="'mailto:' + contacts().email"
-      [attr.aria-label]="'Enviar correo a ' + contacts().email"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 fill-current">
-        <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.01L12 12l8-4.99V7H4z" />
-      </svg>
-      <span>Email</span>
-    </a>
+  <div class="relative z-10">
+    <div class="mb-10">
+      <p class="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.3em] text-midnight-orchid opacity-80">
+        Contacto
+      </p>
+      <h2 class="font-[var(--font-heading)] text-[clamp(1.8rem,3vw,2.3rem)] font-black tracking-tight text-[#2d2a4a]">
+        Construyamos algo con impacto
+      </h2>
+      <p class="mt-4 m-0 max-w-[60ch] text-[1.05rem] font-medium leading-relaxed text-slate-600/90">
+        Disponible para colaborar en proyectos frontend con <span class="text-midnight-orchid font-bold">Angular</span>, arquitectura modular y mejora continua.
+      </p>
+    </div>
 
-    <a
-      class="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-white/35 px-4 py-3 text-sm text-[var(--color-text)] no-underline transition hover:bg-white/55"
-      [href]="contacts().linkedin"
-      rel="noreferrer"
-      target="_blank"
-      aria-label="Abrir perfil de LinkedIn en una nueva pestaña"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 fill-current">
-        <path d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12zM5.5 9.75h2.88V19H5.5zM10.2 9.75h2.76v1.27h.04c.38-.73 1.32-1.5 2.72-1.5 2.9 0 3.44 1.9 3.44 4.37V19h-2.88v-4.53c0-1.08-.02-2.46-1.5-2.46-1.5 0-1.73 1.17-1.73 2.38V19H10.2z" />
-      </svg>
-      <span>LinkedIn</span>
-    </a>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <a
+        class="group flex items-center gap-4 rounded-[1.8rem] border border-white/50 bg-white/40 px-6 py-5 no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-xl hover:shadow-midnight-orchid/10"
+        [href]="'mailto:' + contacts().email"
+        [attr.aria-label]="'Enviar correo a ' + contacts().email"
+      >
+        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-midnight-orchid/10 text-midnight-orchid shadow-inner transition-transform group-hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-500">Escríbeme</span>
+          <span class="text-[0.95rem] font-bold text-[#2d2a4a]">Email</span>
+        </div>
+      </a>
 
-    <a
-      class="flex items-center gap-2 rounded-xl border border-[var(--color-border)] bg-white/35 px-4 py-3 text-sm text-[var(--color-text)] no-underline transition hover:bg-white/55"
-      [href]="contacts().github"
-      rel="noreferrer"
-      target="_blank"
-      aria-label="Abrir perfil de GitHub en una nueva pestaña"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 fill-current">
-        <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.88 1.52 2.32 1.08 2.89.83.09-.64.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.25-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.03a9.45 9.45 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.56 1.38.21 2.41.1 2.66.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.95.36.31.68.93.68 1.88v2.78c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
-      </svg>
-      <span>GitHub</span>
-    </a>
+      <a
+        class="group flex items-center gap-4 rounded-[1.8rem] border border-white/50 bg-white/40 px-6 py-5 no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-xl hover:shadow-midnight-orchid/10"
+        [href]="contacts().linkedin"
+        rel="noreferrer"
+        target="_blank"
+        aria-label="Abrir perfil de LinkedIn en una nueva pestaña"
+      >
+        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-midnight-orchid/10 text-midnight-orchid shadow-inner transition-transform group-hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-500">Conecta</span>
+          <span class="text-[0.95rem] font-bold text-[#2d2a4a]">LinkedIn</span>
+        </div>
+      </a>
+
+      <a
+        class="group flex items-center gap-4 rounded-[1.8rem] border border-white/50 bg-white/40 px-6 py-5 no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-white/60 hover:shadow-xl hover:shadow-midnight-orchid/10"
+        [href]="contacts().github"
+        rel="noreferrer"
+        target="_blank"
+        aria-label="Abrir perfil de GitHub en una nueva pestaña"
+      >
+        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-midnight-orchid/10 text-midnight-orchid shadow-inner transition-transform group-hover:scale-110">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[0.65rem] font-bold uppercase tracking-widest text-slate-500">Código</span>
+          <span class="text-[0.95rem] font-bold text-[#2d2a4a]">GitHub</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>

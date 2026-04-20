@@ -25,7 +25,7 @@ export const CONTACT_LINKS: ContactLinks = {
 
 export const METRICS_DATA: MetricItem[] = [
   { label: 'Años en Tech', value: '2+' },
-  { label: 'Proyectos Cloud', value: '4+' },
+  { label: 'Proyectos', value: '4+' },
   { label: 'Certificaciones IT', value: '4' },
   { label: 'Competencia Inglés', value: 'B2' },
 ];
