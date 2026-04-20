@@ -1,66 +1,71 @@
 <section
   id="perfil"
-  class="grid gap-8 rounded-[1.3rem] border border-[var(--color-border)] bg-[linear-gradient(160deg,#ece8f0_0%,#dfd7e8_55%,#d7cddd_100%)] p-[clamp(1.2rem,4vw,2.5rem)] lg:grid-cols-[1.25fr_0.75fr] lg:items-center"
+  class="relative grid gap-12 rounded-[2.5rem] border border-white/40 bg-[linear-gradient(160deg,#ece8f0_0%,#dfd7e8_55%,#d7cddd_100%)] p-[clamp(1.5rem,5vw,4rem)] lg:grid-cols-[1.2fr_0.8fr] lg:items-center shadow-2xl"
 >
+  <div class="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-purple-200/30 blur-3xl"></div>
+
   <div>
-    <h1 class="text-midnight-orchid text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-[0.98]">
-      {{ profile().name }}
-    </h1>
-
-    <h2 class="text-dusky-lilac mt-4 text-[clamp(1.35rem,2.8vw,2rem)] font-medium">
-      {{ profile().role }}
-    </h2>
-
-    <p class="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white/35 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-[var(--color-text-soft)]">
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 shrink-0 fill-none stroke-current stroke-[1.6]">
+    <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-300/50 bg-white/40 px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.15em] text-midnight-orchid shadow-sm">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4 shrink-0 fill-none stroke-current stroke-[2]">
         <path d="M2.5 12h4l2-4 3 8 2.2-5h2.3l1.5 2h3.5" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
       <span>De la enfermería al frontend</span>
     </p>
 
-    <p class="mt-6 max-w-2xl text-[clamp(1rem,1.7vw,1.2rem)] leading-relaxed text-slate-700">
+    <h1 class="text-midnight-orchid text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[0.95] tracking-tight">
+      {{ profile().name }}
+    </h1>
+
+    <h2 class="text-dusky-lilac mt-4 text-[clamp(1.35rem,2.8vw,2.2rem)] font-semibold opacity-90">
+      {{ profile().role }}
+    </h2>
+
+    <p class="mt-8 max-w-xl text-[clamp(1rem,1.6vw,1.15rem)] leading-relaxed text-slate-700/90 font-medium">
       {{ profile().summary }}
     </p>
 
-    <div class="mt-7 flex flex-wrap gap-2.5">
+    <div class="mt-10 flex flex-wrap items-center gap-4">
       <a
         href="#proyectos"
-        class="bg-midnight-orchid rounded-full px-4 py-2 text-sm font-semibold text-white no-underline transition hover:bg-midnight-orchid/90"
+        class="group flex items-center gap-2 bg-midnight-orchid rounded-full px-8 py-3.5 text-sm font-bold text-white no-underline transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-midnight-orchid/30"
       >
-        Ver proyectos
+        <span>Ver proyectos</span>
+        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
       </a>
+
       <a
         href="assets/cv_Oakland_Frontend_Angular.pdf"
         download="cv_Oakland_Frontend_Angular.pdf"
-        class="text-midnight-orchid border border-iris-mist rounded-full bg-white/55 px-4 py-2 text-sm font-semibold no-underline transition hover:bg-white/80"
+        class="border-2 border-midnight-orchid/20 rounded-full bg-white/30 px-8 py-3.5 text-sm font-bold text-midnight-orchid no-underline transition-all duration-300 hover:bg-white/60 hover:border-midnight-orchid/40 hover:scale-105"
       >
         Descargar CV
       </a>
+
       <a
         href="#contacto"
-        class="text-midnight-orchid border border-iris-mist rounded-full bg-white/55 px-4 py-2 text-sm font-semibold no-underline transition hover:bg-white/80"
+        class="px-4 py-3.5 text-sm font-bold text-midnight-orchid/70 no-underline transition hover:text-midnight-orchid hover:translate-y-[-2px]"
       >
         Contactar
       </a>
     </div>
   </div>
 
-  <figure class="relative mx-auto w-full max-w-[22rem]">
-    <div class="absolute -right-2 -top-2 h-12 w-12 rounded-full bg-white/55 blur-sm"></div>
+  <figure class="relative mx-auto w-full max-w-[24rem] group">
+    <div class="absolute inset-0 -z-10 rounded-[2rem] bg-midnight-orchid/20 blur-2xl transition-all duration-500 group-hover:bg-midnight-orchid/30"></div>
 
-    <div class="border-silver-wisteria shadow-midnight-orchid/10 overflow-hidden rounded-[1.6rem] border bg-white/50 p-2 shadow-xl">
+    <div class="overflow-hidden rounded-[2rem] border-4 border-white/60 bg-white/20 p-2 shadow-2xl backdrop-blur-sm transition-transform duration-500 group-hover:scale-[1.02]">
       <img
         ngSrc="assets/foto-cv.jpg"
         width="640"
         height="640"
-        class="h-[20rem] w-full rounded-[1.1rem] object-cover"
+        class="h-[24rem] w-full rounded-[1.6rem] object-cover"
         alt="Foto de perfil profesional de Oakland Caro"
         priority
       />
     </div>
 
-    <figcaption class="text-dusky-lilac mt-3 text-center text-xs uppercase tracking-[0.08em]">
-      Curiosidad, disciplina y aprendizaje continuo
+    <figcaption class="text-midnight-orchid/60 mt-5 text-center text-[0.65rem] font-bold uppercase tracking-[0.2em]">
+      Curiosidad · Disciplina · Aprendizaje
     </figcaption>
   </figure>
 </section>
