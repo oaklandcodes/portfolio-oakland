@@ -1,30 +1,42 @@
-<section id="habilidades" class="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-5 sm:px-8 sm:py-7">
-  <p class="mb-2 text-xs uppercase tracking-[0.08em] text-[var(--color-text-soft)]">
-    Stack profesional
-  </p>
-  <h2 class="mb-4 font-[var(--font-heading)] text-[clamp(1.2rem,2.4vw,1.75rem)] text-[var(--color-text)]">
-    Habilidades y herramientas
-  </h2>
+<section id="habilidades" class="rounded-[2.5rem] border border-white/40 bg-white/10 p-[clamp(1.5rem,5vw,3rem)] backdrop-blur-sm shadow-xl">
+  <div class="mb-10 text-center lg:text-left">
+    <p class="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.3em] text-midnight-orchid opacity-80">
+      Stack profesional
+    </p>
+    <h2 class="font-[var(--font-heading)] text-[clamp(1.8rem,3vw,2.3rem)] font-black tracking-tight text-[#2d2a4a]">
+      Habilidades y herramientas
+    </h2>
+  </div>
 
-  <div class="grid gap-4 lg:grid-cols-3">
+  <div class="grid gap-6 lg:grid-cols-3">
     @for (group of skills(); track group.title) {
-      <article class="flex h-full flex-col rounded-2xl border border-white/20 bg-white/30 p-4 backdrop-blur-md shadow-xl shadow-[#342a4f]/10">
-        <h3 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.04em] text-[var(--color-accent-strong)]">
-          @if (group.title.includes('Frontend')) {
-            <span aria-hidden="true">🧩</span>
-          } @else if (group.title.includes('Backend')) {
-            <span aria-hidden="true">🛠</span>
-          } @else {
-            <span aria-hidden="true">🤝</span>
-          }
+      <article class="group flex h-full flex-col rounded-[2.2rem] border border-white/50 bg-white/40 p-6 backdrop-blur-md shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-white/60">
+        
+        <h3 class="mb-5 flex items-center gap-3 text-[0.85rem] font-extrabold uppercase tracking-widest text-midnight-orchid">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-midnight-orchid/10 shadow-inner group-hover:scale-110 transition-transform duration-500">
+            @switch (getGroupIcon(group.title)) {
+              @case ('layout') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M4 9l16 0" /><path d="M9 4l0 16" /></svg>
+              }
+              @case ('settings') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+              }
+              @case ('users') {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+              }
+              @default {
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" /></svg>
+              }
+            }
+          </div>
           <span>{{ group.title }}</span>
         </h3>
 
         <div class="flex flex-wrap gap-2">
           @for (item of group.items; track item) {
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/40 px-3 py-1 text-sm leading-tight text-[var(--color-text)] backdrop-blur-md">
-              <span aria-hidden="true" class="text-[0.72rem]">✦</span>
-              <span>{{ item }}</span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 px-4 py-1.5 text-[0.8rem] font-bold text-[#2d2a4a] shadow-sm transition-all duration-300 hover:bg-midnight-orchid hover:text-white group/pill">
+              <span class="h-1.5 w-1.5 rounded-full bg-midnight-orchid group-hover/pill:bg-white transition-colors"></span>
+              {{ item }}
             </span>
           }
         </div>
