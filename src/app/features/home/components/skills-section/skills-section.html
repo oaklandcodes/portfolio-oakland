@@ -9,11 +9,23 @@
   </div>
 
   <div class="grid gap-6 lg:grid-cols-3">
-    @for (group of skills(); track group.title) {
-      <article class="group flex h-full flex-col rounded-[2.2rem] border border-white/50 bg-white/40 p-6 backdrop-blur-md shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-white/60">
-        
+    @for (group of skills(); track group.title; let i = $index) {
+      <article
+        class="group flex h-full flex-col rounded-[2.2rem] border border-t-4 border-white/50 bg-white/40 p-6 backdrop-blur-md shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-white/60 hover:shadow-xl"
+        [class.border-t-violet-500]="i === 0"
+        [class.border-t-sky-500]="i === 1"
+        [class.border-t-amber-400]="i === 2"
+      >
         <h3 class="mb-5 flex items-center gap-3 text-[0.85rem] font-extrabold uppercase tracking-widest text-midnight-orchid">
-          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-midnight-orchid/10 shadow-inner group-hover:scale-110 transition-transform duration-500">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-xl shadow-inner transition-transform duration-500 group-hover:scale-110"
+            [class.bg-violet-100]="i === 0"
+            [class.text-violet-600]="i === 0"
+            [class.bg-sky-100]="i === 1"
+            [class.text-sky-600]="i === 1"
+            [class.bg-amber-100]="i === 2"
+            [class.text-amber-600]="i === 2"
+          >
             @switch (getGroupIcon(group.title)) {
               @case ('layout') {
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M4 9l16 0" /><path d="M9 4l0 16" /></svg>
@@ -34,8 +46,8 @@
 
         <div class="flex flex-wrap gap-2">
           @for (item of group.items; track item) {
-            <span class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 px-4 py-1.5 text-[0.8rem] font-bold text-[#2d2a4a] shadow-sm transition-all duration-300 hover:bg-midnight-orchid hover:text-white group/pill">
-              <span class="h-1.5 w-1.5 rounded-full bg-midnight-orchid group-hover/pill:bg-white transition-colors"></span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 px-4 py-1.5 text-[0.8rem] font-bold text-[#2d2a4a] shadow-sm transition-all duration-300 hover:bg-midnight-orchid hover:text-white hover:border-midnight-orchid group/pill">
+              <span class="h-1.5 w-1.5 rounded-full bg-midnight-orchid transition-colors group-hover/pill:bg-white"></span>
               {{ item }}
             </span>
           }

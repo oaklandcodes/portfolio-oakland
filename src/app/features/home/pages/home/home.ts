@@ -6,6 +6,7 @@ import { HeroSection } from '../../components/hero-section/hero-section';
 import { MetricsSection } from '../../components/metrics-section/metrics-section';
 import { ProjectsSection } from '../../components/projects-section/projects-section';
 import { SkillsSection } from '../../components/skills-section/skills-section';
+import { RevealDirective } from '../../../../shared/directives/reveal.directive';
 import {
   CONTACT_LINKS,
   EDUCATION_DATA,
@@ -27,6 +28,7 @@ import {
     ProjectsSection,
     EducationSection,
     ContactSection,
+    RevealDirective,
   ],
   templateUrl: './home.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

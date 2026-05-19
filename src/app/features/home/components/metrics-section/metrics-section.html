@@ -1,25 +1,23 @@
 <section
-  class="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/10 p-[clamp(1.5rem,5vw,3rem)] backdrop-blur-sm shadow-xl"
+  class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#2d2a4a] via-[#342a4f] to-[#1e1a36] p-[clamp(1.5rem,5vw,3rem)] shadow-2xl"
 >
-  <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-midnight-orchid/10 blur-[100px]"></div>
-  <div class="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-midnight-orchid/5 blur-[100px]"></div>
+  <div class="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-[#f0c060]/10 blur-[90px]"></div>
+  <div class="absolute -left-16 -bottom-16 h-72 w-72 rounded-full bg-purple-400/10 blur-[90px]"></div>
 
   <div class="relative z-10">
     <h2
-      class="mb-3 font-[var(--font-heading)] text-[clamp(1.5rem,2.8vw,2.1rem)] font-black tracking-tight text-[#2d2a4a]"
+      class="mb-3 font-[var(--font-heading)] text-[clamp(1.5rem,2.8vw,2.1rem)] font-black tracking-tight text-white"
     >
       De los cuidados críticos al código escalable
     </h2>
-    
-    <p class="m-0 max-w-[70ch] text-[1.05rem] font-medium leading-relaxed text-slate-600/90">
+
+    <p class="m-0 max-w-[70ch] text-[1.05rem] font-medium leading-relaxed text-white/60">
       Desarrolladora enfocada en la construcción de ecosistemas digitales mediante
-      <strong class="text-midnight-orchid font-bold">Angular</strong>, priorizando la accesibilidad y la arquitectura limpia.
+      <strong class="font-bold text-white/90">Angular</strong>, priorizando la accesibilidad y la arquitectura limpia.
     </p>
 
-    <blockquote
-      class="mt-8 max-w-[65ch] border-l-4 border-midnight-orchid/30 pl-6 py-1"
-    >
-      <p class="m-0 text-[1.1rem] font-semibold italic leading-relaxed text-midnight-orchid/70">
+    <blockquote class="mt-8 max-w-[65ch] border-l-4 border-[#f0c060]/40 pl-6 py-1">
+      <p class="m-0 text-[1.05rem] font-semibold italic leading-relaxed text-white/55">
         "De los cuidados críticos al código escalable: trasladando la precisión clínica y el enfoque
         humano al desarrollo de productos digitales."
       </p>
@@ -28,40 +26,36 @@
     <div class="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-4">
       @for (metric of metrics(); track metric.label) {
         <article
-          class="group flex h-full items-center gap-4 rounded-[1.8rem] border border-white/60 bg-white/40 px-5 py-6 backdrop-blur-md shadow-lg transition-all duration-500 hover:-translate-y-1 hover:bg-white/60 hover:shadow-2xl hover:shadow-midnight-orchid/15"
+          class="group flex h-full flex-col items-center gap-2 rounded-[1.8rem] border border-white/10 bg-white/5 px-5 py-8 text-center backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:bg-white/10 hover:border-white/20 hover:shadow-xl hover:shadow-black/20"
         >
           <div
-            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/40 bg-white/50 text-midnight-orchid shadow-inner transition-transform group-hover:scale-110"
+            class="mb-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-white/50 transition-transform duration-500 group-hover:scale-110 group-hover:text-[#f0c060]/80"
           >
             @switch (getIconType(metric.label)) {
               @case ('history') {
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8l0 4l2 2" /><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 8l0 4l2 2" /><path d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5" /></svg>
               }
               @case ('rocket') {
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
               }
               @case ('certificate') {
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" /><path d="M10 19h-5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10" /><path d="M6 9l12 0" /><path d="M6 13l3 0" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" /><path d="M10 19h-5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10" /><path d="M6 9l12 0" /><path d="M6 13l3 0" /></svg>
               }
               @case ('language') {
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4" /><path d="M12 20l4 -9l4 9" /><path d="M19.1 18h-6.2" /></svg>
               }
               @default {
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
               }
             }
           </div>
 
-          <div class="min-w-0">
-            <p class="m-0 text-3xl font-black leading-tight text-[#2d2a4a]">
-              {{ metric.value }}
-            </p>
-            <p
-              class="m-0 mt-1 text-[0.65rem] font-bold uppercase leading-snug tracking-[0.15em] text-slate-500/90"
-            >
-              {{ metric.label }}
-            </p>
-          </div>
+          <p class="m-0 text-[clamp(2.6rem,5vw,3.4rem)] font-black leading-none text-[#f0c060]">
+            {{ metric.value }}
+          </p>
+          <p class="m-0 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/45 leading-snug">
+            {{ metric.label }}
+          </p>
         </article>
       }
     </div>

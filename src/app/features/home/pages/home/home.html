@@ -1,15 +1,15 @@
 <div class="grid gap-6">
   <app-hero-section [profile]="profile()" />
 
-  <app-metrics-section [metrics]="metrics()" />
+  <app-metrics-section appReveal appRevealDelay="60ms" [metrics]="metrics()" />
 
-  <app-skills-section [skills]="skills()" />
+  <app-skills-section appReveal appRevealDelay="80ms" [skills]="skills()" />
 
-  <app-experience-section [experiences]="experience()" />
+  <app-experience-section appReveal appRevealDelay="80ms" [experiences]="experience()" />
 
-  <app-projects-section [projects]="projects()" />
+  <app-projects-section appReveal appRevealDelay="80ms" [projects]="projects()" />
 
-  <app-education-section [education]="education()" [languages]="languages()" />
+  <app-education-section appReveal appRevealDelay="80ms" [education]="education()" [languages]="languages()" />
 
-  <app-contact-section [contacts]="contacts()" />
+  <app-contact-section appReveal appRevealDelay="80ms" [contacts]="contacts()" />
 </div>
